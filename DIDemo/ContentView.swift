@@ -40,6 +40,7 @@ struct UserListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        let _ = Container.shared.userService.register{ MockService() }
         UserListView()
 //        UserListView(model: withDependencies({
 //            $0.apiClient = .testValue
